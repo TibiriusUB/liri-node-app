@@ -1,6 +1,8 @@
 //Added prescribed variables.
 require("dotenv").config();
+var fs = require("fs");
 var keys = require("./keys.js");
+var https = require('https');
 //added a constructor due to the strange coding of the prescribed "var spoifty" line. Added a function to create an API call.
 function Spotify(obj) {
     this.id = obj.id;
@@ -12,27 +14,34 @@ function Spotify(obj) {
 var spotify = new Spotify(keys.spotify);
 console.log(spotify.id)
 
-console.log(spotify.spotCall());
+
 //previous log produces an "undefined" after it's output. ASK WHY THIS IS!
-console.log("Fin")
+
 
 // begin to take input
-var reQuest = process.argv
+var reQuest = process.argv;
 //assigning an error catch
 
-var qual = reQuest[2].toLowerCase()
-var targ = reQuest[3].toLowerCase()
+var qual = reQuest[2].toLowerCase();
+var targ = reQuest[3].toLowerCase();
 
-// if (qual === "concert-this" ) {
-//     console.log("A");
-// }else if (qual === "spotify-this-song" ) {
-//     console.log("A");
-// }else if (qual === "movie-this" ) {
-//     console.log("A");
-// }else if (qual === "do-what-it-says" ) {
-//     console.log("A");
-// }
-
+//line up the language interpritaion code
+if (qual === "concert-this" ) {
+    
+}else if (qual === "spotify-this-song" ) {
+    console.log(spotify.spotCall());
+}else if (qual === "movie-this" ) {
+    $.ajax({
+        url: "https://www.omdbapi.com/?t= &y= &plot=short&apikey=",
+        method: "GET"
+      }).then(function(response) {
+        console.log(response);
+      });
+    console.log("A");
+}else if (qual === "do-what-it-says" ) {
+    console.log("A");
+}
+console.log("Fin")
 //var inquirer = require("inquirer");
 
 // Make it so liri.js can take in one of the following commands:

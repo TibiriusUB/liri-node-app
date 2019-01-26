@@ -25,38 +25,52 @@ function doWhat() {
     return lookie
 };
 // function to log information to "log.txt", designed to include a timestamp/request header, and accept different sized returns 
-function logThis(x) {
+function logThis(z) {
     var y = "";
-    for (h=0;h<x.length;h++){ 
-        y += x[h]+"\n";
-        console.log(y);
+    for (h=0;h<z.length;h++){ 
+        y += z[h]+"\n";
     };
-    fs.appendFile("log.txt", "----------\n"+moment().format()+" "+targ+"\n----------\n"+y+"//////////\n", function(err) {
+    fs.appendFile("log.txt", "----------\n"+moment().format()+" "+qual+"/'"+targ+"'\n----------\n"+y+"//////////\n", function(err) {
         if (err) {
           return console.log(err);
         }
 });
 };
 //function for axios-based requests, accepts custom inputs
-function useAxios() {
+function useAxios(check, BASE, targ, option) {
     axios.get(BASE+targ+option).then(function(response) {
-        return(response.data)
-});
+        var buck = response.data
+        if (check == 1) {
+            movieThis2(buck)
+        }else{
+            concertThis2(buck)
+        };
 
+}).catch(function (error) {
+    console.log(error);
+  });
+};
 function concertThis() {
     if (reQuest.length < 4) {
         ErrMsg()
     }else{
-    var BASE = "https://rest.bandsintown.com/artists/"
-    var targ = reQuest[3].toLowerCase()
-    var option = "/events?app_id=codingbootcamp"
-    useAxios()
-    var who = (response.data[0].venue.name);
-    var where = (response.data[0].venue.city+", "+response.data[0].venue.region);
-    var when = moment(response.data[0].datetime).format("MM/DD/YYYY");
-    console.log("the band/artist's next appearance is at: \n'"+who+"'\n in "+where+"\n on "+when)
+    var check = 2
+    var BASE = "https://rest.bandsintown.com/artists/";
+    var targ = reQuest[3].toLowerCase();
+    var option = "/events?app_id=codingbootcamp";
+    useAxios(check, BASE, targ, option)
     };
 };
+
+function concertThis2(x) {
+    var who = (x[0].venue.name);
+    var where = (x[0].venue.city+", "+x[0].venue.region);
+    var when = moment(x[0].datetime).format("MM/DD/YYYY");
+    console.log("the band/artist's next appearance is at: \n'"+who+"'\n in "+where+"\n on "+when)
+    blarg = [who,where,when];
+    logThis(blarg)
+};
+
 
 axios.get("http://www.omdbapi.com/?t="+targ+"&y=&plot=short&apikey=trilogy")
 .then(  function(response) {
@@ -78,17 +92,7 @@ axios.get("http://www.omdbapi.com/?t="+targ+"&y=&plot=short&apikey=trilogy")
     console.log("Plot of the movie: " + response.data.Plot);
      console.log("Actors in the movi: " + response.data.Actors);
 });
-axios.get("https://rest.bandsintown.com/artists/" + targ + "/events?app_id=codingbootcamp")
-.then(function(response) {
-        var who = (response.data[0].venue.name);
-        var where = (response.data[0].venue.city+", "+response.data[0].venue.region);
-        var when = moment(response.data[0].datetime).format("MM/DD/YYYY");
-       // console.log(response.data);
-        console.log("#########################################################################################")
-       // console.log(what)
-        console.log("the band/artist's next appearance is at '"+who+"' in "+where+" on "+when)
-    }
-);
+
 spotify.search({ type: 'track', query: targ, limit: 2 }, function(err, data) {
     if (err) {
       return console.log('Error occurred: ' + err);
@@ -109,7 +113,8 @@ spotify.search({ type: 'track', query: targ, limit: 2 }, function(err, data) {
 if (reQuest.length < 3) { ErrMsg()
 
 }else{
-    switch(reQuest[2].toLowerCase()) {
+    var qual = reQuest[2].toLowerCase()
+    switch(qual) {
 
         case "concert-this":
         concertThis()
@@ -137,3 +142,14 @@ if (reQuest.length < 3) { ErrMsg()
 // }else if (qual === "do-what-it-says" ) {
 //     console.log("A");
 // }
+// axios.get("https://rest.bandsintown.com/artists/" +targ + "/events?app_id=codingbootcamp")
+// .then(function(response) {
+//         var who = (response.data[0].venue.name);
+//         var where = (response.data[0].venue.city+", "+response.data[0].venue.region);
+//         var when = moment(response.data[0].datetime).format("MM/DD/YYYY");
+//        // console.log(response.data);
+//         console.log("#########################################################################################")
+//        // console.log(what)
+//         console.log("the band/artist's next appearance is at '"+who+"' in "+where+" on "+when)
+//     }
+// );

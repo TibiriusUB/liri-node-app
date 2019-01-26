@@ -44,14 +44,14 @@ function SpotTheSong() {
         }
         blarg = []
         console.log(data.tracks.items[0].artists[0].name);
-        blarg.push(data.tracks.items[0].artists[0].name);
+       
         console.log(data.tracks.items[0].name);
-        blarg.push(data.tracks.items[0].name);
+       
         console.log(data.tracks.items[0].preview_url);
-        blarg.push(data.tracks.items[0].preview_url);
+       
         console.log(data.tracks.items[0].album.name);
-        blarg.push(data.tracks.items[0].album.name);
-        console.log(blarg);
+      
+        blarg = [data.tracks.items[0].artists[0].name,data.tracks.items[0].name,data.tracks.items[0].preview_url,data.tracks.items[0].album.name]
         logThis(blarg)
     });
 };

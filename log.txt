@@ -1,0 +1,48 @@
+
+----------
+2019-01-25T21:28:37-05:00 natural
+----------
+Imagine Dragons
+Natural
+null
+Origins (Deluxe)
+--------------------
+2019-01-25T21:30:37-05:00 ready to go
+----------
+Panic! At The Disco
+Ready to Go [Get Me Out Of My Mind]
+https://p.scdn.co/mp3-preview/85e6d1522e3809dcc609f0dfa5fdf715d7695a69?cid=8a7e0365eb2f45f08483e0e672017835
+Vices & Virtues
+//////////
+----------
+2019-01-25T21:49:08-05:00 ready to go
+----------
+Panic! At The Disco
+Ready to Go [Get Me Out Of My Mind]
+https://p.scdn.co/mp3-preview/85e6d1522e3809dcc609f0dfa5fdf715d7695a69?cid=8a7e0365eb2f45f08483e0e672017835
+Vices & Virtues
+//////////
+----------
+2019-01-25T21:50:40-05:00 spotify-this-song,"I Want it That Way"
+----------
+Panic! At The Disco
+Ready to Go [Get Me Out Of My Mind]
+https://p.scdn.co/mp3-preview/85e6d1522e3809dcc609f0dfa5fdf715d7695a69?cid=8a7e0365eb2f45f08483e0e672017835
+Vices & Virtues
+//////////
+----------
+2019-01-25T21:50:57-05:00 spotify-this-song,"I Want it That Way"
+----------
+Panic! At The Disco
+Ready to Go [Get Me Out Of My Mind]
+https://p.scdn.co/mp3-preview/85e6d1522e3809dcc609f0dfa5fdf715d7695a69?cid=8a7e0365eb2f45f08483e0e672017835
+Vices & Virtues
+//////////
+----------
+2019-01-25T23:46:06-05:00 "I Want it That Way"
+----------
+Backstreet Boys
+I Want It That Way
+https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=8a7e0365eb2f45f08483e0e672017835
+The Hits--Chapter One
+//////////

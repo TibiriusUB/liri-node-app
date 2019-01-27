@@ -48,7 +48,7 @@ __{do-what-it-says}__ this will use the native Node filesystem module to read a 
 
 All features are displayed in this [DEMO!](https://drive.google.com/file/d/1adCb48Lf58JMJvv1Cp7dMgXeEN_F4Zm2/view "DEMO!")
 
-[concert]: images/Concert.png "concert-this"
-[spotify]: images/Spotify.png "spotify-this-song"
-[movie]: images/Movie.png "movie-this"
-[doit]: images/DOIT.png "do-what-it-says"
+[concert]: (images/Concert.png "concert-this")
+[spotify]: (images/Spotify.png "spotify-this-song")
+[movie]: (images/Movie.png "movie-this")
+[doit]: (images/DOIT.png "do-what-it-says")

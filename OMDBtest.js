@@ -11,7 +11,7 @@ var spotify = new Spotify(keys.spotify);
 var targ ="mr+nobody"
 
 
-axios.get("http://www.omdbapi.com/?t="+targ+"&y=&plot=short&apikey=trilogy")
+axios.get("http://www.omdbapi.com/?t="+targ+"&y=&plot=short&apikey=daa82c8e")
 .then(  function(response) {
     //Then we print out the imdbRating
     
@@ -25,7 +25,7 @@ axios.get("http://www.omdbapi.com/?t="+targ+"&y=&plot=short&apikey=trilogy")
              console.log("Rotten Tomatoes Rating of the movie.: " +RoRate[i].Value)
          };
      };
-    // console.log("Rotten Tomatoes Rating of the movie.: " + response.data.imdbRating);
+    
      console.log("Country(s) where the movie was produced.: " + response.data.Country);
      console.log("Language(s) of the movie: " + response.data.Language);
     console.log("Plot of the movie: " + response.data.Plot);

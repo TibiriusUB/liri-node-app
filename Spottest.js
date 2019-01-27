@@ -42,17 +42,16 @@ function SpotTheSong() {
         if (err) {
             return console.log('Error occurred: ' + err);
         }
-        blarg = []
-        console.log(data.tracks.items[0].artists[0].name);
-       
-        console.log(data.tracks.items[0].name);
-       
-        console.log(data.tracks.items[0].preview_url);
-       
-        console.log(data.tracks.items[0].album.name);
-      
-        blarg = [data.tracks.items[0].artists[0].name,data.tracks.items[0].name,data.tracks.items[0].preview_url,data.tracks.items[0].album.name]
+        var who = (data.tracks.items[0].artists[0].name); 
+        var what =(data.tracks.items[0].name);
+        var why = (data.tracks.items[0].preview_url);
+        var where = (data.tracks.items[0].album.name);
+        console.log("Artist: "+who+"\nTrack: "+what+"\nPreview Link: "+why+"\nAlbum: "+where)
+        blarg = [who,what,why,where]
+        console.log(blarg);
         logThis(blarg)
+        // blarg = [data.tracks.items[0].artists[0].name,data.tracks.items[0].name,data.tracks.items[0].preview_url,data.tracks.items[0].album.nam]
+        // logThis(blarg)
     });
 };
 // .then(function(response) {

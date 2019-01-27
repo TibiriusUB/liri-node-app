@@ -24,23 +24,11 @@ function HELPME() {
 function doWhat() {
     var lookie = fs.readFileSync("random.txt").toString();
     var lookarr = lookie.split(",")
-    qual = lookarr[0]
-    reQuest[3] = lookarr[1]
-    switch (qual) {
+    lookarr.push(lookarr[0], lookarr[1])
+    reQuest = lookarr
+    qual=lookarr[0]
 
-        case "concert-this":
-            concertThis()
-            break;
-
-        case "spotify-this-song":
-            spotThis()
-            break;
-
-        case "movie-this":
-            movieThis()
-            break;
-    };
-
+    ringOut()
 };
 // function to log information to "log.txt", designed to include a timestamp/request header, and accept different sized returns 
 function logThis(z, targ) {
@@ -71,7 +59,7 @@ function useAxios(check, BASE, targ, option) {
 };
 function concertThis() {
     targ = reQuested()
-    targ =targ.replace(/,/g, '+')
+    targ = targ.replace(/,/g, '+')
     console.log(targ)
     if (!targ) {
         ErrMsg()
@@ -84,14 +72,14 @@ function concertThis() {
 };
 
 function concertThis2(x) {
-    if (x[0]){
-    var who = (x[0].venue.name);
-    var where = (x[0].venue.city + ", " + x[0].venue.region);
-    var when = moment(x[0].datetime).format("MM/DD/YYYY");
-    console.log("The band/artist's next appearance is at: \n'" + who + "'\n in " + where + "\n on " + when)
-    blarg = [who, where, when];
-    logThis(blarg, targ)
-    }else{console.log("We are sorry, noe venues can be found!")}
+    if (x[0]) {
+        var who = (x[0].venue.name);
+        var where = (x[0].venue.city + ", " + x[0].venue.region);
+        var when = moment(x[0].datetime).format("MM/DD/YYYY");
+        console.log("The band/artist's next appearance is at: \n'" + who + "'\n in " + where + "\n on " + when)
+        blarg = [who, where, when];
+        logThis(blarg, targ)
+    } else { console.log("We are sorry, noe venues can be found!") }
 };
 
 function movieThis() {

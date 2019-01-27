@@ -45,4 +45,4 @@ __<do-what-it-says>__ this will sue the native Node filesystem module to read a 
   __Help!__
  ...HELP! _o/~ I need somebody o/~..._ Yes! There is a help. It is technically another command __<help>__ and it simply displays the possible commands, and app use syntax. ["node liri.js <command> <request>"]
 
-All features are displayed in this (https://drive.google.com/file/d/1adCb48Lf58JMJvv1Cp7dMgXeEN_F4Zm2/view "DEMO!")
+All features are displayed in this [DEMO!](https://drive.google.com/file/d/1adCb48Lf58JMJvv1Cp7dMgXeEN_F4Zm2/view "DEMO!")

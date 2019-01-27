@@ -9,21 +9,21 @@ Langauge intepratation comes through a command-line interface in a Node.js envir
 
 There are four commands to utilize;
 
-... ![concert-this](images/Concert.png "concert-this")
+... ![concert-this](Images/Concert.png "concert-this")
 __{concert-this} {search term};__ This uses Axios to GET from The __BANDSINTOWN__-Api, and retrieves...
   ..* Artist Name
   ..* Venue
   ..* Venue Location
   ..* and performance date in MM/DD/YYYY format
 
-... ![spotify-this-song](images/Spotify.png "spotify-this-song")
+... ![spotify-this-song](Images/Spotify.png "spotify-this-song")
 __{spotify-this-song} {search term};__ This uses the __Node-Spotify-API__ package to search for song information such as...
   ..* Artist Name
   ..* Track Title
   ..* Preview Link (when applicable)
   ..* Album
   
-  ... ![movie-this](images/Movie.png "movie-this")
+  ... ![movie-this](Images/Movie.png "movie-this")
 __{movie-this} {search term};__ This uses Axios with the Open Movie DataBase "OMDB" API to pull quite a bit of info from a selected movie... 
   ..* Movie Title
   ..* Year of Release
@@ -34,7 +34,7 @@ __{movie-this} {search term};__ This uses Axios with the Open Movie DataBase "OM
   ..* Plot
   ..* Actors
   
-  ... ![do-what-it-says](images/DOIT.png "do-what-it-says")
+  ... ![do-what-it-says](Images/DOIT.png "do-what-it-says")
 __{do-what-it-says}__ this will use the native Node filesystem module to read a supplied file "Random.txt." The file information contains a command and search topic that will direct another LIRI search. In this case, it is not very random, the file contains the string '_spotify-this-song,"I Want it That Way"_' and the result should be from that command.
   
  __log.txt__

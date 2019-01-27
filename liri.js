@@ -76,7 +76,7 @@ function concertThis2(x) {
         var who = (x[0].venue.name);
         var where = (x[0].venue.city + ", " + x[0].venue.region);
         var when = moment(x[0].datetime).format("MM/DD/YYYY");
-        console.log("The band/artist's next appearance is at: \n'" + who + "'\n in " + where + "\n on " + when)
+        console.log("The band/artist's next appearance is at:\n'" + who + "'\nin " + where + "\non " + when)
         blarg = [who, where, when];
         logThis(blarg, targ)
     } else { console.log("We are sorry, noe venues can be found!") }

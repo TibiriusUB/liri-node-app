@@ -6,7 +6,7 @@ Week 10, Node
 
 This project uses the Node Package Manager "NPM" modules for Spotify_API, Axios, and "moment".
 Langauge intepratation comes through a command-line interface in a Node.js environment, and works with pre-defined commands to produce results from API calls. As it is a user interface, some error handling is present, as well as an in-app help. Using the commands is based off of Node, so they all start with ["node liri.js"], followed by the commands, and search request.
-###### __PLease note, the project *requires* a .env file with Spotify credentials to work__
+###### __Please note, this project *requires* a .env file with Spotify credentials to work__
 
 There are four commands to utilize;
 
